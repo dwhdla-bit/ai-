@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: ri-neon-ai
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TOKEN
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: MODEL
+        value: openrouter/free
